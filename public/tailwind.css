@@ -1,0 +1,24 @@
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --tw-color-blue-500: oklch(62.3% 0.214 259.815);
+    --tw-color-white: #fff;
+    --tw-spacing: 0.25rem;
+    --tw-radius-xl: 0.75rem;
+  }
+}
+@layer utilities {
+  .tw\:rounded-xl {
+    border-radius: var(--tw-radius-xl);
+  }
+  .tw\:bg-blue-500 {
+    background-color: var(--tw-color-blue-500);
+  }
+  .tw\:p-4 {
+    padding: calc(var(--tw-spacing) * 4);
+  }
+  .tw\:text-white {
+    color: var(--tw-color-white);
+  }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fleurs à domicile (Tailwind)</title>
+  <link rel="stylesheet" href="/tw/tw-fleurs.css">
+</head>
+<body class="pt-16 bg-white text-gray-800">
+
+  <!-- 1 : navbar -->
+   <nav class="fixed top-0 left-0 w-full z-50 bg-blue-600 text-white shadow">
+  <div class="max-w-6xl mx-auto flex items-center justify-between px-4 h-16">
+
+    <!-- Brand avec spinner jaune -->
+    <a href="#" class="flex items-center gap-2 font-bold text-lg">
+      <span class="w-4 h-4 rounded-full bg-yellow-400 animate-ping"></span>
+      Fleurs Express
+    </a>
+
+    <!-- Bouton hamburger (visible sur mobile seulement) -->
+    <button id="burger" class="md:hidden text-2xl">&#9776;</button>
+
+    <!-- Menu -->
+    <ul id="menu" class="hidden md:flex absolute md:static top-16 left-0 w-full md:w-auto bg-blue-600 md:bg-transparent flex-col md:flex-row gap-1 md:gap-6 p-4 md:p-0">
+      <li><a href="#" class="block py-1 hover:text-yellow-300">Accueil</a></li>
+
+      <!-- Dropdown 1 -->
+      <li class="relative group">
+        <a href="#" class="block py-1 hover:text-yellow-300">Bouquets &#9662;</a>
+        <ul class="hidden group-hover:block absolute left-0 bg-white text-gray-800 rounded shadow w-44 py-1">
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Roses</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Tulipes</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Mélangés</a></li>
+        </ul>
+      </li>
+
+      <!-- Dropdown 2 -->
+      <li class="relative group">
+        <a href="#" class="block py-1 hover:text-yellow-300">Livraison &#9662;</a>
+        <ul class="hidden group-hover:block absolute left-0 bg-white text-gray-800 rounded shadow w-44 py-1">
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Zones desservies</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">Tarifs</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#" class="block py-1 hover:text-yellow-300">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+  <!-- 2 : slider -->
+   <div class="relative w-full h-[450px] overflow-hidden">
+
+  <div class="slide absolute inset-0">
+    <img src="/img/bouquet1.jpg" class="w-full h-full object-cover" alt="Roses">
+    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white text-center">
+      <h2 class="text-3xl font-bold">Bouquet de roses rouges</h2>
+      <p>12 roses, livrées le jour même.</p>
+    </div>
+  </div>
+
+  <div class="slide absolute inset-0 hidden">
+    <img src="/img/bouquet2.jpg" class="w-full h-full object-cover" alt="Tulipes">
+    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white text-center">
+      <h2 class="text-3xl font-bold">Tulipes de printemps</h2>
+      <p>Des couleurs vives pour égayer la maison.</p>
+    </div>
+  </div>
+
+  <div class="slide absolute inset-0 hidden">
+    <img src="/img/bouquet3.jpg" class="w-full h-full object-cover" alt="Mélange">
+    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white text-center">
+      <h2 class="text-3xl font-bold">Bouquet champêtre</h2>
+      <p>Un mélange de fleurs de saison.</p>
+    </div>
+  </div>
+
+  <button id="prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full w-10 h-10 text-xl">&#10094;</button>
+  <button id="next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full w-10 h-10 text-xl">&#10095;</button>
+</div>
+  <!-- 3 : cartes -->
+   <div class="max-w-6xl mx-auto px-4 my-12">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <div class="rounded-lg border shadow bg-white flex flex-col">
+      <div class="bg-blue-600 text-white px-4 py-2 rounded-t-lg font-semibold">Bouquet Printemps</div>
+      <img src="/img/bouquet1.jpg" alt="Narcisses" class="w-full h-56 object-cover">
+      <div class="p-4 flex-1">
+        <h3 class="font-bold text-lg">10 narcisses</h3>
+        <p class="text-gray-600">Blancs, jaunes et orange, pour annoncer le printemps.</p>
+      </div>
+      <div class="border-t px-4 py-3 flex justify-between items-center bg-gray-50 rounded-b-lg">
+        <span class="font-bold">22 €</span>
+        <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-sm px-3 py-1 rounded">Commander</a>
+      </div>
+    </div>
+
+    <div class="rounded-lg border shadow bg-white flex flex-col">
+      <div class="bg-blue-600 text-white px-4 py-2 rounded-t-lg font-semibold">Bouquet Bleu Nuit</div>
+      <img src="/img/bouquet2.jpg" alt="Chrysanthèmes bleus" class="w-full h-56 object-cover">
+      <div class="p-4 flex-1">
+        <h3 class="font-bold text-lg">8 chrysanthèmes bleus</h3>
+        <p class="text-gray-600">Une touche originale et moderne.</p>
+      </div>
+      <div class="border-t px-4 py-3 flex justify-between items-center bg-gray-50 rounded-b-lg">
+        <span class="font-bold">26 €</span>
+        <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-sm px-3 py-1 rounded">Commander</a>
+      </div>
+    </div>
+
+    <div class="rounded-lg border shadow bg-white flex flex-col">
+      <div class="bg-blue-600 text-white px-4 py-2 rounded-t-lg font-semibold">Bouquet Romance</div>
+      <img src="/img/bouquet3.jpg" alt="Roses roses" class="w-full h-56 object-cover">
+      <div class="p-4 flex-1">
+        <h3 class="font-bold text-lg">15 roses roses</h3>
+        <p class="text-gray-600">Le classique pour dire « je t'aime ».</p>
+      </div>
+      <div class="border-t px-4 py-3 flex justify-between items-center bg-gray-50 rounded-b-lg">
+        <span class="font-bold">40 €</span>
+        <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-sm px-3 py-1 rounded">Commander</a>
+      </div>
+    </div>
+
+    <div class="rounded-lg border shadow bg-white flex flex-col">
+      <div class="bg-blue-600 text-white px-4 py-2 rounded-t-lg font-semibold">Bouquet Champêtre</div>
+      <img src="/img/bouquet4.jpg" alt="Roses et œillets" class="w-full h-56 object-cover">
+      <div class="p-4 flex-1">
+        <h3 class="font-bold text-lg">12 fleurs mélangées</h3>
+        <p class="text-gray-600">Roses, œillets et fleurs sauvages, livrés en vase.</p>
+      </div>
+      <div class="border-t px-4 py-3 flex justify-between items-center bg-gray-50 rounded-b-lg">
+        <span class="font-bold">38 €</span>
+        <a href="#" class="bg-yellow-400 hover:bg-yellow-500 text-sm px-3 py-1 rounded">Commander</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+  <!-- 4 : jumbotron -->
+   <div class="max-w-6xl mx-auto px-4 mb-12">
+  <div class="bg-gray-100 rounded-xl p-10">
+    <h1 class="text-4xl font-bold mb-3">Offrez des fleurs, partout, tout le temps</h1>
+    <p class="text-xl text-gray-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatem.</p>
+    <hr class="my-4">
+    <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, quos.</p>
+    <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded">En savoir plus</a>
+  </div>
+</div>
+  <!-- 5 : pied de page -->
+   <footer class="bg-blue-100 text-blue-900 text-center p-6 border-t border-blue-200">
+  <p class="mb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <a href="#" class="font-semibold underline">Droits des utilisateurs</a>
+  <p class="mt-2 text-sm">&copy; 2026 Fleurs Express. Tous droits réservés.</p>
+</footer>
+
+  <script>
+    // Menu hamburger
+document.getElementById('burger').addEventListener('click', () => {
+  document.getElementById('menu').classList.toggle('hidden');
+});
+
+// Slider
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function show(i) {
+  slides[current].classList.add('hidden');
+  current = (i + slides.length) % slides.length;
+  slides[current].classList.remove('hidden');
+}
+
+document.getElementById('next').addEventListener('click', () => show(current + 1));
+document.getElementById('prev').addEventListener('click', () => show(current - 1));
+setInterval(() => show(current + 1), 4000); // défilement automatique
+  </script>
+</body>
+</html>
